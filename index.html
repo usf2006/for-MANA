@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="A special birthday story for Mana – featuring Meshmesha the cat 🐱❤️" />
+  <meta name="theme-color" content="#fff0f3" />
+  <title>Happy Birthday Mana ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="assets/meshmesha/idle.png" as="image" />
+  <link rel="preload" href="assets/MANA.jpg" as="image" />
+</head>
+<body>
+
+  <!-- Background particles -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- Fade transition overlay -->
+  <div id="fade-overlay" class="fade-overlay" aria-hidden="true"></div>
+
+  <!-- Music toggle -->
+  <button id="music-btn" class="music-btn" aria-label="Toggle background music" title="Play Music 🎵">
+    🎵
+  </button>
+
+  <!-- ============ APP CONTAINER ============ -->
+  <main class="app-container">
+
+    <!-- ---- STORY SECTION ---- -->
+    <section id="story-section" aria-label="Meshmesha's Story">
+
+      <div id="story-card" class="story-card">
+
+        <!-- Cat Character -->
+        <div id="cat-wrapper" class="cat-wrapper" role="button" tabindex="0" aria-label="Tap Meshmesha to continue the story">
+          <img
+            id="cat-image"
+            class="cat-image"
+            src="assets/meshmesha/idle.png"
+            alt="Meshmesha – idle"
+            draggable="false"
+          />
+          <div class="tap-ring" aria-hidden="true"></div>
+        </div>
+
+        <!-- Story Text -->
+        <div class="story-text-wrapper">
+          <p id="story-text" class="story-text" aria-live="polite"></p>
+        </div>
+
+        <!-- Tap Hint -->
+        <p id="tap-hint" class="tap-hint">
+          <span class="paw-icon">🐾</span> Tap Meshmesha to continue
+        </p>
+
+        <!-- Step Dots -->
+        <div id="step-dots" class="step-counter" aria-label="Story progress"></div>
+
+      </div>
+
+    </section>
+
+    <!-- ---- FINAL REVEAL SECTION ---- -->
+    <section id="reveal-section" class="reveal-section" aria-label="Birthday Reveal">
+
+      <!-- Mana Photo -->
+      <div class="mana-photo-wrapper">
+        <img
+          class="mana-photo"
+          src="assets/MANA.jpg"
+          alt="Mana – Happy Birthday!"
+          draggable="false"
+        />
+      </div>
+
+      <!-- Birthday Title -->
+      <h1 class="birthday-title">Happy Birthday Mana ❤️</h1>
+
+      <!-- Birthday Message -->
+      <p class="birthday-message">
+        You’ve been one of the best people in my life since 2020… and honestly, that never changed ❤️
+      </p>
+
+      <!-- Love Button -->
+      <button id="love-btn" class="love-btn">
+        Tap here if you accept my gift 🎁
+      </button>
+
+      <!-- Love Response -->
+      <p id="love-response" class="love-response">
+        Obviously… my gifts are too good to refuse 😏
+      </p>
+
+    </section>
+
+  </main>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
